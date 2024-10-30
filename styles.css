@@ -1,0 +1,89 @@
+#body-background{
+  background-color: #C3C9BE;
+}
+
+#form-background{
+  background-color: #1B2F2B;
+}
+
+img{
+   object-fit: cover;
+}
+
+button.btn {
+border-radius:50px;
+padding:15px 30px;
+font-size: 1.2rem;
+}
+
+#wrapper{
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input.form-control,select.form-control {
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  padding: 8px 0;
+  color: white !important;
+  outline: none;
+  transition: border-color 0.3s;
+  box-shadow: none !important;
+}
+
+input.form-control:hover,select.form-control:hover{
+  border-bottom-color:#28a745;
+} 
+
+input.form-control:focus,select.form-control:focus{
+  border-bottom-color:#007bff;
+  background-color: transparent !important;
+}
+
+input::placeholder{
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+/* Autofill handling for Chrome/Safari */
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px #1B2F2B inset !important; /* Match form background */
+  -webkit-text-fill-color: white !important; /* White autofill text */
+}
+
+/* Autofill handling for Firefox */
+input:-moz-autofill {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 50px #1B2F2B inset !important;
+  -moz-text-fill-color: white !important;
+}
+
+ /* Input wrapper to position icon */
+
+.input-icon{
+  position: relative;
+}
+
+ /* Hide native calendar picker icon in date input */
+ input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+/* Add space for the custom icon */
+input[type="date"] {
+  padding-right: 40px; /* Reserve space for the icon */
+}
+
+/* Position the Font Awesome icon */
+.input-icon i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white; /* Icon color */
+  pointer-events: none; /* Prevent icon from blocking input */
+}
